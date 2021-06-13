@@ -14,12 +14,18 @@ def element_replace(arr, hash)
 end
 
 def hash_element(ele, hash)
-  count = 0
-  while count < hash.length
+  # count = 0
+  # while count < hash.length
+  #   if hash.has_key?(ele)
+  #     return true
+  #   end
+  #   count +=1
+  # end
+  # return false
+  hash.each do 
     if hash.has_key?(ele)
       return true
     end
-    count +=1
   end
   return false
 end
@@ -29,6 +35,7 @@ hash1 = {"Serena Williams"=>"tennis", "LeBron James"=>"basketball"}
 
 print element_replace(arr1, hash1) # => ["basketball", "Lionel Messi", "tennis"]
 
+puts
 
 arr2 = ["dog", "cat", "mouse"]
 hash2 = {"dog"=>"bark", "cat"=>"meow", "duck"=>"quack"}
